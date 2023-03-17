@@ -13,7 +13,7 @@ int x = 'A';
 	{
 		int i = tolower(x);
 
-		putchar(i);
+		putchar(i"\n");
 		x++;
 	}
 	}
