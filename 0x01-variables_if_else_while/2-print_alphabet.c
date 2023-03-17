@@ -13,9 +13,10 @@ int x = 'A';
 	{
 		int i = tolower(x);
 
-		putchar(i"\n");
+		putchar(i);
 		x++;
 	}
+	putchar('\n');
 	}
 	return (0);
 }
