@@ -6,9 +6,9 @@
  * Return: value of the last digit
  */
 
-int print_last_digit(long int n)
+int print_last_digit(int n)
 {
-	long int k;
+	int k;
 
 	if (n < 0)
 	{
@@ -16,6 +16,10 @@ int print_last_digit(long int n)
 	}
 
 	k = n % 10;
+	if (k < 0)
+	{
+	k = -k;
+	}
 
 	_putchar(k + '0');
 	return (k);
