@@ -10,14 +10,14 @@ int n = 0;
 
 if (n <= 0)
 {
-putchar('\n');
+_putchar('\n');
 }
 else
 {
 for (j = 0; j < n; ++j)
 {
-putchar('_');
+_putchar('_');
 }
-putchar('\n');
+_putchar('\n');
 }
 }
