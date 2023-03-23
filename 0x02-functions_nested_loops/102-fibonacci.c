@@ -6,16 +6,16 @@
 */
 int main(void)
 {
-long long  a = 1;
-long long  b = 2;
-long long  c;
+long int  a = 1;
+long int  b = 2;
+long int  c;
 
-printf("%lld, %lld", a, b);
+printf("%ld, %ld", a, b);
 
 for (int i = 2; i < 50; i++)
 {
 c = a + b;
-printf(", %lld", c);
+printf(", %ld", c);
 a = b;
 b = c;
 }
