@@ -10,7 +10,7 @@ int n = 0;
 
 if (n <= 0)
 {
-putchar('j');
+putchar('\n');
 }
 else
 {
