@@ -9,7 +9,7 @@
 int _atoi(char *s)
 {
 int i;
-int Negative;
+int Negative = 0;
 int number;
 int TheGatheredNumbers = 0;
 int len = 0;
