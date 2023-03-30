@@ -7,7 +7,7 @@
 
 char *cap_string(char *string)
 {
-	int i;
+	int i = 0;
 	int j;
 	char separator[] = {'\n', '\t', ' ', '.', ',', ';', '!', '"',
 	'?', ')', '(', '{', '}'};
