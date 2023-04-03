@@ -17,11 +17,8 @@ char *_strchr(char *s, char c)
 	{
 		if (*(s + i) == c)
 		{
-			for (x = i; x <= j; x++)
-			{
-				s = s + x;
+				s = s + i;
 				return (s);
-			}
 		}
 	}
 	return ('\0');
