@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
 *_strchr - function that locates a character in a string.
 *@s : pointer to array
@@ -22,5 +23,5 @@ char *_strchr(char *s, char c)
 			return (s + x);
 		}
 	}
-	return ('\0');
+	return (NULL);
 }
