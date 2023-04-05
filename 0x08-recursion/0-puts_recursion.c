@@ -3,7 +3,7 @@
 * _puts_recursion - function that prints a string, followed by a new line
 * @s: charachter of the string
 * Description : if *s it means it is NULL then make new line
-*Base case ->  when s is 0
+*if it isn't return the char then moves to the second char by 1byte
 */
 
 void _puts_recursion(char *s)
