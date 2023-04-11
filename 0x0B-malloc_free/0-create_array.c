@@ -17,6 +17,12 @@ char *create_array(unsigned int size, char c)
 	{
 		return ('\0');
 	}
+
+	if (t == NULL)
+	{
+		return ('\0');
+	}
+
 	for (i = 0; i < size; i++)
 	{
 		t[i] = c;
