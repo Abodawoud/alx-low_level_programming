@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	int i;
 	int j = 0;
 	int Gneh;
-	int fkka[5] = {25, 10, 5, 2, 1};
+	int fkka[4] = {25, 10, 2, 1};
 
 	if (argc == 1)
 	{
