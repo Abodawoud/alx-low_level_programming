@@ -18,7 +18,9 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+
 	int Gneh = atoi(argv[1]);
+
 	if (Gneh <= 0)
 	{
 		printf("0\n");
@@ -33,6 +35,6 @@ int main(int argc, char *argv[])
 			break;
 		}
 	}
-	printf("%d\n",j);
+	printf("%d\n", j);
 	return (0);
 }
