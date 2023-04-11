@@ -11,7 +11,8 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int j = 0;
-	int fkka[4] = {25, 10, 5, 2, 1};
+	int Gneh;
+	int fkka[5] = {25, 10, 5, 2, 1};
 
 	if (argc == 1)
 	{
@@ -19,7 +20,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	int Gneh = atoi(argv[1]);
+	Gneh = atoi(argv[1]);
 
 	if (Gneh <= 0)
 	{
