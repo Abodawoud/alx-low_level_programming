@@ -28,7 +28,7 @@ char *argstostr(int ac, char **av)
          * to get the length of string + NULL Terminator
         */
     }
-    t = (char *)malloc(length);
+    t = (char *)malloc(length + 1);
 
 
     if (t == NULL)
