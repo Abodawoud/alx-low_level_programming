@@ -1,3 +1,4 @@
+#include"main.h"
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -16,7 +17,7 @@ void error(void)
  * @s2: Second String
  * Return: the length of two strings
 */
-int is_Num(char *s1, char *s2)
+void is_Num(char *s1, char *s2)
 {
 	int i;
 	int j;
@@ -28,7 +29,6 @@ int is_Num(char *s1, char *s2)
 	for (j = 0; s2[j] != '\0'; j++)
 		if (!isdigit(s2[j]))
 			error();
-	return (1);
 }
 /**
  * main - program that multiplies two positive numbers.
@@ -71,11 +71,11 @@ int main(int argc, char *argv[])
 		if (t[i])
 			j = 1;
 		if (j)
-			_putchar(t[i] + '0');
+			putchar(t[i] + '0');
 	}
 	if (!j)
-		_putchar('0');
-	_putchar('\n');
+		putchar('0');
+	putchar('\n');
 	free(t);
 	return (0);
 }
