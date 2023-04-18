@@ -21,13 +21,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 	(*p).age = age;
 
 	if ((*p).name == NULL)
+	{
+		free(p);
 		return (NULL);
+	}
 
 	if ((*p).owner == NULL)
+	{
+		free(p);
+		free((*p).name);
 		return (NULL);
-
-	if ((*p).name == NULL)
-		return (NULL);
+	}
 
 	strcpy((*p).name, name);
 	strcpy((*p).owner, owner);
