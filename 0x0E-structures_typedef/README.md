@@ -8,5 +8,5 @@
 |:---:|:---:|:---:|
 |`0. Poppy`|`dog.h`|`Define a new type struct dog`|
 |`1. A dog is the only thing on earth`|`1-init_dog.c`|`initialize a variable of type struct dog`|
-|`0. Poppy`|`dog.h`|`Define a new type struct dog`|
+|`2. A dog will teach you unconditional love`|`2-print_dog.c`|`prints a struct dog`|
 |`0. Poppy`|`dog.h`|`Define a new type struct dog`|
