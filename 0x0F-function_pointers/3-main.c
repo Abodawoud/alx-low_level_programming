@@ -31,5 +31,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (100);
 	}
+	printf("%d\n", p(num1, num2));
 	return (0);
 }
