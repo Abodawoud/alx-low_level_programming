@@ -18,6 +18,7 @@ void print_all(const char * const format, ...)
 	va_start(list, format);
 	while (format && format[i])
 	{
+		sp = "";
 		if (format[i + 1] != '\0')
 			sp = ", ";
 		switch (format[i])
@@ -33,16 +34,10 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			p = va_arg(list, char*);
-			if (p != NULL)
-			{
-				printf("%s%s", p, sp);
-				break;
-			}
-			else
-			{
-				printf("(nil)");
-				break;
-			}
+			if (!p)
+				p = "(nil)";
+			printf("%s%s", p, sp);
+			break;
 		}
 		i++;
 	}
