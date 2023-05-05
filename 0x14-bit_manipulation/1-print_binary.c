@@ -2,19 +2,14 @@
 
 /**
  * print_binary - function that prints the binary representation of a number.
- * @n: number
+ * @n: is pointing to a string of 0 and 1 chars
  * Return: Void
 */
 void print_binary(unsigned long int n)
 {
-	int mask = 1 << 31;
-
-	while (mask != 0)
+	if (n > 1)
 	{
-		if (n & mask)
-			printf("1");
-		else
-			printf("0");
-		mask >>= 1;
+		print_binary(n >> 1);
 	}
+	_putchar('0' + (n & 1));
 }
