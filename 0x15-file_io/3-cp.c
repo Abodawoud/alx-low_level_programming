@@ -58,7 +58,7 @@ void error_message(int ff, int ft, char *argv[])
 	{
 		dprintf(STDERR_FILENO, "%s%s\n",
 		"Error: Can't read from file NAME_OF_THE_FILE", argv[1]);
-		exit(99);
+		exit(98);
 	}
 
 	if (ft == -1)
