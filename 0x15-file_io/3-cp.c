@@ -3,13 +3,13 @@
 /**
  * main - Entry Function
  * @ac: filename
- * @av: string to write to the file
+ * @argv: string to write to the file
  * Return: 1 on success, -1 on failure
 */
-int main(int ac, char **av)
+int main(int ac, char *argv[])
 {
 	int ff, ft, err_close;
-	unsigned int num_chars, numberofwrites;
+	int num_chars, numberofwrites;
 	char buffer[1024];
 
 	if (ac != 3)
@@ -17,18 +17,18 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
 	}
-	ff = open(av[1], O_RDONLY);
-	ft = open(av[2], O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 0664);
-	error_message(ff, ft, av);
+	ff = open(argv[1], O_RDONLY);
+	ft = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 0664);
+	error_message(ff, ft, argv);
 	num_chars = 1024;
 	while (num_chars == 1024)
 	{
 		num_chars = read(ff, buffer, 1024);
 		if (num_chars == -1)
-			error_message(-1, 0, av);
+			error_message(-1, 0, argv);
 		numberofwrites = write(ft, buffer, num_chars);
-		if (num_chars == -1)
-			error_message(0, -1, av);
+		if (numberofwrites == -1)
+			error_message(0, -1, argv);
 	}
 	err_close = close(ff);
 	if (err_close == -1)
@@ -43,27 +43,28 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ff);
 		exit(100);
 	}
+	return (0);
 }
 /**
  * error_message - Function error
  * @ff: filename from
  * @ft: filename to
- * @av: string to write to the file
+ * @argv: string to write to the file
  * Return: VOID
 */
-void error_message(int ff, int ft, char *av)
+void error_message(int ff, int ft, char *argv[])
 {
 	if (ff == -1)
 	{
 		dprintf(STDERR_FILENO, "%s%s\n",
-		"Error: Can't read from file NAME_OF_THE_FILE", av[1]);
+		"Error: Can't read from file NAME_OF_THE_FILE", argv[1]);
 		exit(99);
 	}
 
 	if (ft == -1)
 	{
 		dprintf(STDERR_FILENO, "%s%s\n",
-		"Error: Can't write to NAME_OF_THE_FILE", av[2]);
+		"Error: Can't write to NAME_OF_THE_FILE", argv[2]);
 		exit(99);
 	}
 }
