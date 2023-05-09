@@ -57,14 +57,14 @@ void error_message(int ff, int ft, char *argv[])
 	if (ff == -1)
 	{
 		dprintf(STDERR_FILENO, "%s%s\n",
-		"Error: Can't read from file NAME_OF_THE_FILE", argv[1]);
+		"Error: Can't read from file ", argv[1]);
 		exit(98);
 	}
 
 	if (ft == -1)
 	{
 		dprintf(STDERR_FILENO, "%s%s\n",
-		"Error: Can't write to NAME_OF_THE_FILE", argv[2]);
+		"Error: Can't write to ", argv[2]);
 		exit(99);
 	}
 }
