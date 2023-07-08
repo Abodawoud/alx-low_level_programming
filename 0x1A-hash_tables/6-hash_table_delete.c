@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 #include <stdbool.h>
 /**
- * hash_table_print - that prints a hash table.
+ * hash_table_delete - that delete a hash table.
  * @ht: The size of the array.
  * Return: Nothing
 */
@@ -14,18 +14,22 @@ void hash_table_delete(hash_table_t *ht)
 
 	if (ht == NULL)
 		return;
+
 	for (index = 0; index < ht->size; index++)
 	{
 		curr = ht->array[index];
-		while (curr != NULL)
+		while (curr)
 		{
-			free_me = curr;
-			curr = curr->next;
-			free(free_me->key);
-			free(free_me->value);
-			free(free_me);
+			free_me = curr->next;
+			free(curr->key);
+			free(curr->value);
+			free(curr);
+			curr = free_me;
 		}
-		free(ht->array[index]);
+		if (curr)
+		{
+			ht->array[index] = NULL;
+		}
 	}
 	free(ht->array);
 	free(ht);
