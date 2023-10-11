@@ -1,6 +1,6 @@
 # ifndef SEARCH_ALGOS_H
 # define SEARCH_ALGOS_H
-#define MIN(i, j) (((i) < (j)) ? (i) : (j))
+#define MIN(i, j) (((i) <= (j)) ? (i) : (j))
 #include <stdio.h>
 #include <math.h>
 int linear_search(int *array, size_t size, int value);
